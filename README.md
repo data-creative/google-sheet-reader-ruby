@@ -3,7 +3,7 @@
 A ruby library
 for extracting spreadsheet data from [Google Drive](https://www.google.com/drive/).
 
-Enables specification of a custom ETL procedure to be performed on each row.
+Performs a custom ETL procedure on each row.
 
 ## Installation
 

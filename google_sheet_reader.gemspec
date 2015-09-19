@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["MJ Rossetti (@s2t2)"]
   spec.email         = ["s2t2mail+git@gmail.com"]
 
-  spec.summary       = %q{A ruby library for parsing Google Drive spreadsheet documents.}
-  spec.description   = %q{A ruby library for parsing Google Drive spreadsheet documents. Enables you to specify a custom ETL procedure to be performed on each row.}
+  spec.summary       = %q{A ruby library for extracting spreadsheet data from Google Drive.}
+  spec.description   = %q{A ruby library for extracting spreadsheet data from Google Drive. Performs a custom ETL procedure on each row.}
   spec.homepage      = "https://github.com/data-creative/google-sheet-reader-ruby"
   spec.license       = "MIT"
 
