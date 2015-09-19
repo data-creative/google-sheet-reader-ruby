@@ -18,12 +18,13 @@ describe GoogleDriver do
       }
     }
 
-    it 'extracts spreadsheet data' do
-      GoogleDriver.extract(document_id, options)
-
+    it 'needs a .json key_file' do
       puts options[:key_file_path]
-
       expect(File.exist?(options[:key_file_path])).to eq(true)
+    end
+
+    it 'extracts spreadsheet data' do
+      pending # todo
     end
   end
 end

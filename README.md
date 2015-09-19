@@ -15,10 +15,9 @@ Or install yourself with `gem install google_driver`.
 
 ## Usage
 
-See [Prerequisites](#Prerequisites) section below for instructions on where to find configuration option values.
-
 ```` rb
 spreadsheet_id = "1a2B3C45_x0G44lk15Ff_M33ps"
+# see Prerequisites section below for instructions on how to obtain most of these configuration option values ...
 configuration_options = {
   :app_name => "my-app",
   :email_address => "abc-123@developer.gserviceaccount.com",
@@ -27,6 +26,7 @@ configuration_options = {
     "PARSING A SPREADSHEET ROW HERE -- #{row.inspect}"
   end
 }
+
 GoogleDriver.extract(spreadsheet_id, configuration_options)
 ````
 
@@ -64,13 +64,11 @@ After checking out the repo, run `bin/setup` to install dependencies.
 
 ### Testing
 
-Add the following environment variables to your .bash_profile:
+Store a real service account .json key file in the **spec/key_file/** directory, and add the following environment variables to your .bash_profile:
 
- + GOOGLE_DRIVER_APP_NAME
- + GOOGLE_DRIVER_EMAIL
- + GOOGLE_DRIVER_KEY_FILE_NAME
-
-Store a real service account .json key file in the **spec/key_file/** directory.
+ + `GOOGLE_DRIVER_APP_NAME`
+ + `GOOGLE_DRIVER_EMAIL`
+ + `GOOGLE_DRIVER_KEY_FILE_NAME`
 
 Run `rake rspec` or `bundle exec rspec spec/` to run the tests.
 
