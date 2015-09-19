@@ -21,7 +21,7 @@ spreadsheet_id = "1a2B3C45_x0G44lk15Ff_M33ps"
 configuration_options = {
   :app_name => "my-app",
   :email_address => "abc-123@developer.gserviceaccount.com",
-  :key_file_path => File.expand_path("../key_file/my-app-abc123xy456z.json", __FILE__),
+  :key_file_path => File.expand_path("../key_file/my-app-abc123xy456z.p12", __FILE__),
   :extraction_procedure => Proc.new do |row|
     "PARSING A SPREADSHEET ROW HERE -- #{row.inspect}"
   end
@@ -42,7 +42,7 @@ Navigate to the **APIs & Auth > APIs** menu and enable the *Drive API* by search
 
 Navigate to the **APIs & Auth > Credentials** menu and add credentials for a service account.
 
-Choose the .json key file option, download it, optionally move it somewhere else, and finally note its file path.
+Choose the .p12 key file option, download it, optionally move it somewhere else, and finally note its file path.
 
 Back in the browser, also note the service account's email address.
 
@@ -64,7 +64,7 @@ After checking out the repo, run `bin/setup` to install dependencies.
 
 ### Testing
 
-Store a real service account .json key file in the **spec/key_file/** directory, and add the following environment variables to your .bash_profile:
+Store a real service account .p12 key file in the **spec/key_file/** directory, and add the following environment variables to your .bash_profile:
 
  + `GOOGLE_DRIVER_APP_NAME`
  + `GOOGLE_DRIVER_EMAIL`

@@ -6,25 +6,27 @@ describe GoogleDriver do
   end
 
   describe '#extract' do
-    let(:document_id){ ENV['GOOGLE_DRIVER_FILE_ID'] }
-    let(:options){
+    let(:spreadsheet_id){ ENV['GOOGLE_DRIVER_FILE_ID'] }
+    let(:configuration_options){
       {
         :app_name => ENV['GOOGLE_DRIVER_APP_NAME'],
         :email_address => ENV['GOOGLE_DRIVER_EMAIL'],
-        :key_file_path => File.expand_path("../key_file/#{ENV['GOOGLE_DRIVER_KEY_FILE_NAME']}", __FILE__),
+        :key_file_path => File.expand_path("../key_files/#{ENV['GOOGLE_DRIVER_KEY_FILE_NAME']}", __FILE__),
         :extraction_procedure => Proc.new do |row|
           "PARSING A SPREADSHEET ROW HERE -- #{row.inspect}"
         end
       }
     }
 
-    it 'needs a .json key_file' do
-      puts options[:key_file_path]
-      expect(File.exist?(options[:key_file_path])).to eq(true)
+    it 'needs a .p12 key_file' do
+      puts configuration_options[:key_file_path]
+      expect(File.exist?(configuration_options[:key_file_path])).to eq(true)
     end
 
     it 'extracts spreadsheet data' do
-      pending # todo
+      GoogleDriver.extract(spreadsheet_id, configuration_options)
+
+      # todo
     end
   end
 end
