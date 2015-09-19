@@ -71,6 +71,7 @@ Store a real service account .p12 key file in the **spec/key_file/** directory, 
  + `GOOGLE_SHEET_READER_APP_NAME`
  + `GOOGLE_SHEET_READER_EMAIL`
  + `GOOGLE_SHEET_READER_KEY_FILE_NAME`
+ + `GOOGLE_SHEET_READER_FILE_ID`
 
 Run `rake rspec` or `bundle exec rspec spec/` to run the tests.
 
