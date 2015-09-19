@@ -24,9 +24,10 @@ describe GoogleDriver do
     end
 
     it 'extracts spreadsheet data' do
-      GoogleDriver.extract(spreadsheet_id, configuration_options)
+      process = GoogleDriver.extract(spreadsheet_id, configuration_options)
 
-      # todo
+      expect(process[:status]).to eql("SUCCESS")
+      expect(process[:row_count] > 0)
     end
   end
 end

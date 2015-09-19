@@ -58,11 +58,11 @@ module GoogleDriver
     raise EmptyFileError.new("This spreadsheet has no data. Please add rows.") unless csv_result.any?
 
     csv_result.each do |row|
-      binding.pry
       extraction_procedure.call(row)
     end
 
     puts "PARSED #{csv_result.count} ROWS"
+    return {:status => "SUCCESS", :row_count => csv_result.count}
   end
 
   class FileRetrievalError < StandardError ; end
