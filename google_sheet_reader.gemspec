@@ -1,17 +1,17 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'google_driver/version'
+require 'google_sheet_reader/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "google_driver"
-  spec.version       = GoogleDriver::VERSION
+  spec.name          = "google_sheet_reader"
+  spec.version       = GoogleSheetReader::VERSION
   spec.authors       = ["MJ Rossetti (@s2t2)"]
   spec.email         = ["s2t2mail+git@gmail.com"]
 
   spec.summary       = %q{A ruby library for parsing Google Drive spreadsheet documents.}
-  spec.description   = %q{A ruby library for parsing Google Drive spreadsheet documents.}
-  spec.homepage      = "https://github.com/data-creative/google-driver-ruby"
+  spec.description   = %q{A ruby library for parsing Google Drive spreadsheet documents. Enables you to specify a custom ETL procedure to be performed on each row.}
+  spec.homepage      = "https://github.com/data-creative/google-sheet-reader-ruby"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or

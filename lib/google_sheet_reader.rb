@@ -1,9 +1,9 @@
 require 'google/api_client'
 require 'csv'
 
-require "google_driver/version"
+require "google_sheet_reader/version"
 
-module GoogleDriver
+module GoogleSheetReader
 
   def self.client(options = {})
     app_name = options[:app_name]
@@ -25,7 +25,7 @@ module GoogleDriver
   # @param [Hash] options [String] key_file_path
   # @param [Hash] options [Proc] extraction_procedure
   #
-  # @example GoogleDriver.extract(file_id, opts)
+  # @example GoogleSheetReader.extract(file_id, opts)
   #
   def self.extract(spreadsheet_id, options = {})
     app_name = options[:app_name]

@@ -1,17 +1,19 @@
-# GoogleDriver
+# GoogleSheetReader
 
 A ruby library
 for extracting spreadsheet data from [Google Drive](https://www.google.com/drive/).
+
+Enables specification of a custom ETL procedure to be performed on each row.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'google_driver'
+gem 'google_sheet_reader'
 ```
 
-Or install yourself with `gem install google_driver`.
+Or install yourself with `gem install google_sheet_reader`.
 
 ## Usage
 
@@ -27,7 +29,7 @@ configuration_options = {
   end
 }
 
-GoogleDriver.extract(spreadsheet_id, configuration_options)
+GoogleSheetReader.extract(spreadsheet_id, configuration_options)
 ````
 
 ### Prerequisites
@@ -54,7 +56,7 @@ Share the spreadsheet with the service account's email address in a "can edit" r
 
 ## Contributing
 
-Browse existing [issues](https://github.com/data-creative/google-driver-ruby/issues) or create a new issue to communicate bugs, desired features, etc.
+Browse existing [issues](https://github.com/data-creative/google-sheet-reader-ruby/issues) or create a new issue to communicate bugs, desired features, etc.
 
 After forking the repo and pushing your changes, create a pull request referencing the applicable issue(s).
 
@@ -66,9 +68,9 @@ After checking out the repo, run `bin/setup` to install dependencies.
 
 Store a real service account .p12 key file in the **spec/key_file/** directory, and add the following environment variables to your .bash_profile:
 
- + `GOOGLE_DRIVER_APP_NAME`
- + `GOOGLE_DRIVER_EMAIL`
- + `GOOGLE_DRIVER_KEY_FILE_NAME`
+ + `GOOGLE_SHEET_READER_APP_NAME`
+ + `GOOGLE_SHEET_READER_EMAIL`
+ + `GOOGLE_SHEET_READER_KEY_FILE_NAME`
 
 Run `rake rspec` or `bundle exec rspec spec/` to run the tests.
 
